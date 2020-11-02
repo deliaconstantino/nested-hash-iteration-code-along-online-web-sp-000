@@ -14,24 +14,24 @@ require 'pry'
   #   }
   # }
 
-def remove_strawberry(contacts)
-  contacts.each do |person, contact_details_hash|
-    binding.pry
-  end
-end
-
-
-
 # def remove_strawberry(contacts)
 #   contacts.each do |person, contact_details_hash|
-#     if person == "Freddy Mercury"
-#       contact_details_hash.each do |attribute, value|
-#         if attribute == :favorite_ice_cream_flavors
-#           value.delete("strawberry")
-#         end
-#       end
-#     end
+#     binding.pry
 #   end
-#
-#
 # end
+
+
+
+def remove_strawberry(contacts)
+  contacts.each do |person, contact_details_hash|
+    if person == "Freddy Mercury"
+      contact_details_hash.each do |attribute, value|
+        if attribute == :favorite_ice_cream_flavors
+          value.delete("strawberry")
+        end
+      end
+    end
+  end
+
+
+end
